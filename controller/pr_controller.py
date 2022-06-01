@@ -8,7 +8,7 @@ def get_pr_page(user):
     return render_template("pr.html", username=user)
 
 def add_new_pr(user, pr_input):
-    print(pr_input)
+    #print(pr_input)
     new_pr = secs_to_time(hms_to_seconds(int(pr_input["timeH"]),int(pr_input["timeM"]),int(pr_input["timeS"])))
 
     distance = pr_input["distance"]

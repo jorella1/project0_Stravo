@@ -27,7 +27,7 @@ def create_user_info(user_id, input):
 #add user to the PR table
 def create_user_pr(user_id):
     pr_dto = PR(0, user_id, None, None, None, None, None, None, None)
-    print(pr_dto)
+    #print(pr_dto)
     return_id = insert_pr(user_id, pr_dto)
-    print(return_id)
+    #print(return_id)
     
