@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add PR</title>
+</head>
+<body>
+    <h1>Enter your personal records</h1>
+    <form action="http://127.0.0.1:5000/account/{{username}}/PR/submit" method="post">
+        <label for="distance">Distance:</label>
+        <br>
+        
+        <input type="radio" id="half" name="distance" value= "13">
+        <label for="half">Half Marathon(13.1)</label><br>
+        <input type="radio" id="full" name="distance" value= "26">
+        <label for="full">Full Marathon(26.2)</label><br>
+        <input type="radio" id="50k" name="distance" value= "31">
+        <label for="50k">50k(31)</label><br>
+        <input type="radio" id="50m" name="distance" value= "50">
+        <label for="50m">50 Miler</label><br>
+        <input type="radio" id="100k" name="distance" value= "62">
+        <label for="100k">100k(62.1)</label><br>
+        <input type="radio" id="100m" name="distance" value= "100">
+        <label for="100m">100 Miler</label><br>
+
+
+        <h2>Time:</h2>
+        <label for="time">Time in Hours</label>
+        <br>
+        <input type="number" id="timeH" name="timeH"><br>
+        <label for="time">Time in Minutes</label>
+        <br>
+        <input type="number" id="timeM" name="timeM"><br>
+        <label for="time">Time in Seconds</label>
+        <br>
+        <input type="number" id="timeS" name="timeS"><br>
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
