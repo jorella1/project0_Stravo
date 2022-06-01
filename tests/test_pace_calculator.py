@@ -16,6 +16,25 @@ testdata1 = [
 def test_secs_to_time(seconds, expected):
     assert secs_to_time(seconds) == expected
 
+testdatafail = [
+    (10, "00:10:10"), 
+    (11, "00:68:11"), 
+    (4000, "01:06:41"), 
+    (9999, "02:46:40"),
+    (10000, "03:46:40"),
+    (1, "00:00:02"),
+    (10000000, "00:00:10"), 
+    (500, "30:00:11"), 
+    (4000, "1:06:40"), 
+    (9999, "2:46:39"),
+    (100000, "13:46:40"),
+    (0, "00:10:00")
+    ]
+
+@pytest.mark.parametrize("seconds, expected", testdatafail)
+def test_secs_to_time_fail(seconds, expected):
+    assert not secs_to_time(seconds) == expected
+
 testdata2 = [
     (1,1,1,["Mile: 0 Time: 00:00:00", "Mile: 1 Time: 00:01:01"]),
     (0 ,0,0,["Mile: 0 Time: 00:00:00"])
